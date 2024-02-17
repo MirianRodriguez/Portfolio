@@ -1,0 +1,25 @@
+---
+const {image, title, description, technologies, link} = Astro.props;
+---
+
+<div class="mb-12 lg:mb-0">
+    <div class="relative mb-6 overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20 bg-[50%]" data-te-ripple-init data-te-ripple-color="light">
+      <img src={image} class="w-full" />
+      <a href={link} target="_blank">
+        <div
+          class="mask absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100 bg-[hsla(0,0%,98.4%,0.2)]"></div>
+      </a>
+    </div>
+    <h5 class="mb-4 text-lg font-bold">{title}</h5>
+    <div class="mb-4 flex items-center justify-center text-sm font-medium lg:justify-start flex-wrap">
+      {technologies.map((technology)=>(
+        <span
+            class="inline-block whitespace-nowrap rounded-[0.27rem] bg-cyan-100 border border-cyan-700 px-[0.65em] pb-[0.25em] pt-[0.35em] m-1 text-center align-baseline text-[1em] font-bold leading-none text-cyan-700 justify-items-center">
+            {technology}
+        </span>
+      ))}
+    </div>
+    <p class="text-gray-500 dark:text-gray-300 text-pretty">
+      {description}
+    </p>
+</div>

@@ -1,0 +1,51 @@
+---
+import Project from "./Project.astro";
+
+const PROJECTS = [
+    {
+        image: '/projects/portfolio.png',
+        title: 'Portfolio', 
+        description: 'Usted está aquí 😉', 
+        technologies: ['Astro', 'Tailwind'], 
+        link: 'https://github.com/MirianRodriguez/Portfolio'
+    },
+    {
+        image: '/projects/clima.png',
+        title: 'Consulta de clima', 
+        description: 'Web para consultar el clima con un buscador por ciudad. Los datos se obtienen consultando a la API Visual Crossing.', 
+        technologies: ['React', 'MUI'], 
+        link: 'https://weather-by-mirian.netlify.app/'
+    },
+    {
+        image: '/projects/disney.png',
+        title: 'API Disney', 
+        description: 'API que permite gestionar la información de los personajes del mundo de Disney, vinculados con las películas en las que participaron y los géneros de las mismas.', 
+        technologies: ['Java', 'Spring Boot', 'MySQL'], 
+        link: 'https://github.com/MirianRodriguez/Disney-API'
+    },
+    {
+        image: '/projects/lo_que_busques.png',
+        title: 'Lo que busques', 
+        description: 'Aplicación web cuyo objetivo es nuclear a pequeños emprendedores, los cuales tienen acceso al sistema con la posibilidad de publicar la información referente a su emprendimiento, así como de los distintos productos que ofrecen. Los visitantes y usuarios que se registren al sistema, pueden ver los productos y contactar con el emprendedor para concretar las compras. Un administrador del sitio, se encarga de dar de alta o baja a los emprendimientos, crear nuevas categorías, entre otras funcionalidades', 
+        technologies: ['Java', 'Spring Boot', 'Spring Security', 'MySQL', 'Bootstrap'], 
+        link: 'https://github.com/MirianRodriguez/Lo-que-busques'
+    },
+    {
+        image: '/projects/tissu.png',
+        title: 'Tissu', 
+        description: 'Sistema de gestión para taller de confecciones a medida. Permite gestionar información sobre clientes, compras de materiales, stock, pagos recibidos, etc.; registrar pedidos con las medidas de cada prenda estimando la fecha de entrega en función de la carga de trabajo actual, y ofreciendo un presupuesto acorde a los costos actuales de materiales y de confección; enviar notificaciones automatizadas al cliente, y asignar tareas a los confeccionistas.', 
+        technologies: ['Laravel', 'MySQL', 'Bootstrap'], 
+        link: 'https://www.youtube.com/watch?v=PmVHQlIaddA'
+    }
+]
+---
+
+<div class="container mx-auto md:px-6">
+  <section class="mb-32 text-center lg:text-left">
+    <div class="grid gap-x-6 gap-y-6 lg:grid-cols-3">
+      {PROJECTS.map((project) => (
+          <Project {...project}/>
+      ))}
+    </div>
+  </section>
+</div>

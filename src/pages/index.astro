@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+import LinkedIn from '../components/icons/LinkedIn.astro';
+import GitHub from '../components/icons/Github.astro';
+import Email from '../components/icons/Mail.astro';
+import SocialBadge from '../components/SocialBadge.astro';
+import Experience from "../components/Experience.astro";
+import Education from "../components/Education.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Projects from "../components/Projects.astro";
+import Hero from "../components/Hero.astro";
+---
+
+<Layout title="Mirian Rodriguez - Desarrollador">
+  <main>
+    <SectionContainer>
+		<Hero />
+	</SectionContainer>
+	<SectionContainer id="experience" class="ps-5">
+		<h2 class="my-6 text-3xl font-semibold">Experiencia laboral</h2>
+		<Experience/>
+	</SectionContainer>
+	<SectionContainer id="education">
+		<h2 class="my-6 text-3xl font-semibold text-right">Formación</h2>
+		<Education/>
+	</SectionContainer>
+	<SectionContainer id="projects">
+		<h2 class="my-6 text-3xl font-semibold text-center">Proyectos académicos</h2>
+		<Projects />
+	</SectionContainer>
+  </main>
+</Layout>

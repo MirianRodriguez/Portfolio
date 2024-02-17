@@ -1,0 +1,16 @@
+---
+import TimelineItem from "./TimelineItem.astro";
+
+const {data, position} = Astro.props;
+const borderPosition = position === 'left' ? 'border-s' : 'border-e';
+---
+
+<ol class=`relative ${borderPosition} border-gray-400 dark:border-gray-700`>
+  {
+    data.map((data) => (
+      <li class="mb-10 ms-6 me-6">
+        <TimelineItem {...data} position={position}><slot/></TimelineItem>
+      </li>
+    ))
+  }
+</ol>

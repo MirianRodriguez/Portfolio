@@ -1,0 +1,23 @@
+---
+import Timeline from "./Timeline.astro";
+import Job from '../components/icons/Job.astro';
+
+const EXPERIENCE = [
+  {
+    name: "Desarrollador Fullsatck | EPIDATA S.A.",
+    date: "nov 2022 - actualidad",
+    description: "Participación en diversos proyectos, principalmente para organismos de gobierno, realizando tareas de desarrollo de nuevas funcionalidades, detección y corrección de errores, mantenimiento, análisis y estimación de requerimientos. Se destaca mi capacidad resolutiva y de adaptación.",
+  },
+  {
+    name: "Ayudante de primera docente | Universidad Nacional de Misiones",
+    date: "ago 2021 - dic 2023",
+    description: "Apoyo al equipo de cátedra en tareas de planificación de clases, seguimiento de los estudiantes, corrección de actividades.",
+  },
+  {
+    name: "Facilitador técnico / pedagógico | Escuela de robótica Misiones",
+    date: "abr 2021 - dic 2021",
+    description: "Dictado de clases de robótica en conjunto con un par pedagógico, abarcando temas de programación, electrónica básica y diseño e impresión 3D, y trabajando con estudiantes de diversas edades.",
+  },
+];
+---
+<Timeline data={EXPERIENCE} position = 'left'><Job/></Timeline>

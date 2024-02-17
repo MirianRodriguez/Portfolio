@@ -1,0 +1,17 @@
+---
+import Timeline from "./Timeline.astro";
+import Certification from '../components/icons/Certification.astro';
+const EDUCATION = [
+  {
+    name: "Analista en Sistemas de Computación | Universidad Nacional de Misiones",
+    date: "2015 - 2021",
+    description: "Es una carrera de pregrado que brinda la formación requerida para realizar programación, prueba, documentación, actualización y mantenimiento de sistemas informáticos. Capacita para trabajar en equipos de relevamiento y análisis de datos, diseño de sistemas, control, entre otros.",
+  },
+  {
+    name: "Profesorado Universitario en Computación | Universidad Nacional de Misiones",
+    date: "2015 - 2019",
+    description: "Es una carrera de grado que brinda la formación para cumplir el rol docente en Nivel Medio y Superior, formando profesionales capacitados para desempeñarse como asesores y jefes de departamentos tecnológicos en instituciones públicas y privadas.",
+  },
+];
+---
+<Timeline data={EDUCATION} position = 'right'><Certification/></Timeline>
