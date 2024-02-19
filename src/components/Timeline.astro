@@ -5,7 +5,7 @@ const {data, position} = Astro.props;
 const borderPosition = position === 'left' ? 'border-s' : 'border-e';
 ---
 
-<ol class=`relative ${borderPosition} border-gray-400 dark:border-gray-700`>
+<ol class=`relative ${borderPosition} border-gray-700 dark:border-gray-300`>
   {
     data.map((data) => (
       <li class="mb-10 ms-6 me-6">
