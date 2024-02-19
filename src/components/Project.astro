@@ -10,7 +10,7 @@ const {image, title, description, technologies, link} = Astro.props;
           class="mask absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100 bg-[hsla(0,0%,98.4%,0.2)]"></div>
       </a>
     </div>
-    <h5 class="mb-4 text-lg font-bold">{title}</h5>
+    <h5 class="mb-4 md:text-lg font-bold">{title}</h5>
     <div class="mb-4 flex items-center justify-center text-sm font-medium lg:justify-start flex-wrap">
       {technologies.map((technology)=>(
         <span
@@ -19,7 +19,7 @@ const {image, title, description, technologies, link} = Astro.props;
         </span>
       ))}
     </div>
-    <p class="text-pretty">
+    <p class="text-sm md:text-base text-pretty">
       {description}
     </p>
 </div>
