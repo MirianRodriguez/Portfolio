@@ -1,15 +1,17 @@
 ---
-const {image, title, description, technologies, link} = Astro.props;
+const {image, tooltip, title, description, technologies, link} = Astro.props;
 ---
 
 <div class="mb-12 lg:mb-0">
-    <div class="relative mb-6 overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20 bg-[50%]" data-te-ripple-init data-te-ripple-color="light">
-      <img src={image} class="w-full" />
-      <a href={link} target="_blank">
-        <div
-          class="mask absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100 bg-[hsla(0,0%,98.4%,0.2)]"></div>
-      </a>
-    </div>
+  <div class="relative mb-6 overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20 bg-[50%]" data-te-ripple-init data-te-ripple-color="light">
+    <img src={image} class="w-full" />
+      <div class="mask absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100 bg-[hsla(0,0%,98.4%,0.2)]">
+        <div class="align-center flex justify-center items-center shadow-sm w-33 rounded-2xl h-full">
+          <a href={link} target="_blank" class="inline-flex items-center justify-center gap-2 px-4 py-1 
+          text-xs md:text-base transition border rounded-full text-md bg-cyan-700 border-cyan-700 group max-w-fit text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black">{tooltip}</a>
+        </div>
+      </div>
+    </div>  
     <h5 class="mb-4 md:text-lg font-bold">{title}</h5>
     <div class="mb-4 flex items-center justify-center text-sm font-medium lg:justify-start flex-wrap">
       {technologies.map((technology)=>(

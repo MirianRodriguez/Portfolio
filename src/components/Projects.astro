@@ -4,6 +4,7 @@ import Project from "./Project.astro";
 const PROJECTS = [
     {
         image: '/projects/portfolio.jpg',
+        tooltip: 'Ver repositorio',
         title: 'Portfolio', 
         description: 'Usted está aquí 😉', 
         technologies: ['Astro', 'Tailwind'], 
@@ -11,6 +12,7 @@ const PROJECTS = [
     },
     {
         image: '/projects/clima.jpg',
+        tooltip: 'Ver despliegue',
         title: 'Consulta de clima', 
         description: 'Uno de mis primeros proyectos utilizando React. Es una web para consultar el clima con un buscador por ciudad. Los datos se obtienen consultando a la API Visual Crossing.', 
         technologies: ['React', 'MUI'], 
@@ -18,6 +20,7 @@ const PROJECTS = [
     },
     {
         image: '/projects/disney.jpg',
+        tooltip: 'Ver repositorio',
         title: 'API Disney', 
         description: 'API que permite gestionar la información de los personajes del mundo de Disney, vinculados con las películas en las que participaron y los géneros de las mismas.', 
         technologies: ['Java', 'Spring Boot', 'MySQL'], 
@@ -25,13 +28,15 @@ const PROJECTS = [
     },
     {
         image: '/projects/lo_que_busques.jpg',
+        tooltip: 'Ver repositorio',
         title: 'Lo que busques', 
-        description: 'Aplicación web cuyo objetivo es nuclear a pequeños emprendedores, los cuales tienen acceso al sistema con la posibilidad de publicar la información referente a su emprendimiento, así como de los distintos productos que ofrecen. Los visitantes y usuarios que se registren al sistema, pueden ver los productos y contactar con el emprendedor para concretar las compras. Un administrador del sitio, se encarga de dar de alta o baja a los emprendimientos, crear nuevas categorías, entre otras funcionalidades', 
+        description: 'Aplicación web cuyo objetivo es nuclear a pequeños emprendedores, los cuales tienen acceso al sistema con la posibilidad de publicar la información referente a su emprendimiento, así como de los distintos productos que ofrecen. Los visitantes y usuarios que se registren al sistema, pueden ver los productos y contactar con el emprendedor para concretar las compras. Un administrador del sitio, se encarga de dar de alta o baja a los emprendimientos, crear nuevas categorías, entre otras funcionalidades. Este proyecto fue desarrollado en equipo.', 
         technologies: ['Java', 'Spring Boot', 'Spring Security', 'MySQL', 'Bootstrap'], 
         link: 'https://github.com/MirianRodriguez/Lo-que-busques'
     },
     {
         image: '/projects/tissu.jpg',
+        tooltip: 'Ver video-demo',
         title: 'Tissu', 
         description: 'Sistema de gestión para taller de confecciones a medida. Permite gestionar información sobre clientes, compras de materiales, stock, pagos recibidos, etc.; registrar pedidos con las medidas de cada prenda estimando la fecha de entrega en función de la carga de trabajo actual, y ofreciendo un presupuesto acorde a los costos actuales de materiales y de confección; enviar notificaciones automatizadas al cliente, y asignar tareas a los confeccionistas.', 
         technologies: ['Laravel', 'MySQL', 'Bootstrap'], 

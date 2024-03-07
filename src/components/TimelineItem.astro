@@ -10,6 +10,8 @@ const textAlignmentClass = isLeft ? 'text-left' : 'text-right';
 </span>
 <h3 class=`mb-1 md:text-lg font-semibold ${textAlignmentClass}`>{name}</h3>
 <time class=`block mb-2 text-sm font-normal leading-none ${textAlignmentClass}`>{date}</time>
-<p class=`mb-4 text-sm md:text-base font-normal text-pretty ${textAlignmentClass}`>{description}</p>
-
-
+<div>
+    {description.map((parrafo) => (
+        <p class=`mb-4 text-sm md:text-base font-normal text-pretty ${textAlignmentClass}`>{parrafo}</p>
+    ))}
+</div>
